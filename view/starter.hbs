@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url("starterf.png");
+            background-size: 1400px 700px; 
+        }
+         .but {
+     line-height: 12px;
+     width: 150px;
+     height: 50px;
+     font-size: 10pt;
+     font-family: tahoma;
+     margin-top: 10px;
+     margin-right: 10px;
+     position:absolute;
+     top:0;
+     right:0;
+ }
+ .topnav {
+    background-color: rgb(250, 246, 246);
+    overflow: hidden;
+    float: right;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #242bf1;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: rgb(27, 12, 125);
+  color: white;
+}
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+  float: right;
+}
+
+    </style>
+</head>
+<body>
+    <div>
+            {{!-- <button class="but" ><a href="/index">Click me</a></button> --}}
+            <div class="topnav">
+  <a class="active" href="/home">Go To Home Page</a>
+  {{!-- <a href="#news">News</a> --}}
+  {{!-- <a href="#contact">Features</a>
+  <div class="topnav-right">
+    <a href="#search">Connect</a> --}}
+    {{!-- <a href="#about">About</a> --}}
+
+    
+</div>
+    </div>
+</body>
+</html>

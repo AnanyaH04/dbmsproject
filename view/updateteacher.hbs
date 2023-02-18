@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+      <form action="/updatingsearch">
+   <h3>SEARCH TEACHER DETAILS TO BE UPDATED</h3>
+   
+    <hr>
+ 
+    <label for="id"><b>ID</b></label>
+    <input type="number" style="width:200px;" placeholder="type id to be searched" name="id" id="id" required>
+
+    <p><button type="submit" class="registerbtn">SEACRH TEACHER</button></p>
+    <p><a href="./index2" style="color:black">BACK TO HOME PAGE</a></p>
+
+    <br>
+
+{{#if umesg}}
+     <h3>Data updated!</h3>
+     {{/if}}
+
+
+     
+     {{#if mesg2}}
+     <h3>Data Not Found!</h3>
+     {{/if}}
+    </form>
+  </div>
+
+<!--Search form design end-->
+
+  {{#if mesg1}}
+    <div class="container">
+       <form action="/updatingteacher"  >
+        <h3>UPDATE TEACHER</h3>
+        
+            <hr>
+            {{#data}}
+
+            <label for="name"><b>Teacher name</b></label>
+            <input type="text" placeholder="Enter Teacher Name" name="name" value="{{name}}" id="name" required>
+
+            <label for="id"><b>ID</b></label>
+            <input type="number" placeholder="Enter ID" name="id" value="{{id}}" id="id" required readonly>
+
+            <label for="email"><b>Email</b></label>
+            <input type="email" placeholder="Enter Email ID " name="email" value="{{email}}" id="email" required readonly>
+        
+            <button type="submit" class="registerbtn">UPDATE TEACHER</button>
+          {{/data}}
+
+        
+            <p>   <a href="./updateteacher" style="color:black">BACK TO HOME PAGE</a> <br></p> <br>
+     
+</form>
+</div>
+
+   {{/if}} 
+  </html>
+

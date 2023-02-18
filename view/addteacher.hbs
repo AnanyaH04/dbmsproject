@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <form action="/addingteacher"  >
+        <h3>ADD TEACHER</h3>
+        
+            <hr>
+
+            <label for="name"><b>Teacher name</b></label>
+            <input type="text" placeholder="Enter Teacher Name" name="name" id="name" required>
+
+            <label for="phone"><b>Phone number</b></label>
+            <input type="phone" placeholder="Enter Phoneno" name="phone" id="phone" required>
+
+            <p><label for="email"><b>Email ID</b></label>
+            <input type="email" placeholder="Enter EmailId" name="email" id="email" required></p>
+        
+             <label for="id"><b>ID</b></label>
+            <input type="number" placeholder="Enter Teacher ID" name="id" id="id" required>
+
+            <label for="cid"><b>CID</b></label>
+            <input type="number" placeholder="Enter Teacher CID" name="cid" id="cid" required>
+
+            <label for="salary"><b>Salary</b></label>
+            <input type="number" placeholder="Enter Teacher Salary" name="salary" id="salary" required>
+        
+            <label for="joindate"><b>Join Date</b></label>
+            <input type="date" placeholder="Enter joining date" name="joindate" id="joindate" required>
+
+            <button type="submit" class="registerbtn">HIRE TEACHER</button>
+
+        
+            <p>   <a href="./index2" style="color:black">BACK TO HOME PAGE</a> <br></p> <br>
+     {{#if mesgt}}
+     <h3>Data has been inserted</h3>
+     {{/if}}
+
+      {{#if checkmesgt}}
+     <h3>cid already present</h3>
+     {{/if}}
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <div class="container">
+      <form action="/searchingstudent"   >
+   <h3>SEARCH  STUDENT</h3>
+   
+    <hr>
+ 
+    <label for="sid"><b>SID</b></label>
+    <input type="number" placeholder="type SID to be searched" name="sid" id="sid" required>
+
+    <button type="submit" class="registerbtn">SEACRH STUDENT</button>
+    <a href="./index3" style="color:black">BACK TO HOME PAGE</a>
+    <br>
+
+    {{#if msg1}}
+    <h3>Data found</h3>
+    {{/if}}
+    
+     {{#if msg2}}
+     <h3>Data Not Found!</h3>
+     {{/if}}
+     </form>
+  </div>
+</body>
+</html>

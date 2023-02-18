@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+       <form action="/addingclass"  >
+   <h3>ADD CLASS</h3>
+    <hr>
+
+    <label for="roomno"><b>Room Number</b></label>
+    <input type="number" placeholder="Enter Class room number" name="roomno" id="roomno" required>
+
+    <label for="id"><b>Teacher Id</b></label>
+    <input type="number" placeholder="Enter Teacher Id" name="id" id="id" required></br>
+
+    <label for="cid"><b>Course Id</b></label>
+    <input type="number" placeholder="Enter course Id" name="cid" id="cid" required></br>
+   
+    <button type="submit" class="registerbtn">ADD CLASS</button>
+
+    <p><a href="./index4" style="color:black">BACK TO HOME PAGE</a></p> <br>
+
+     {{#if mesgc}}
+     <h3>Data has been inserted</h3>
+     {{/if}}
+
+      {{#if checkmesgc}}
+     <h3>RoomNo already present</h3>
+     {{/if}}
+     
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+      <form action="/updatingsearchstudent">
+   <h3>SEARCH STUDENT DETAILS TO BE UPDATED</h3>
+   
+    <hr>
+ 
+    <label for="sid"><b>ID</b></label>
+    <input type="number" style="width:200px;" placeholder="type sid to be searched" name="sid" id="sid" required>
+
+    <button type="submit" class="registerbtn">SEACRH STUDENT</button>
+    <p><a href="./index3" style="color:black">BACK TO HOME PAGE</a></p>
+
+    <br>
+
+{{#if umesg}}
+     <h3>Data updated!</h3>
+     {{/if}}
+
+
+     
+     {{#if mesg2}}
+     <h3>Data Not Found!</h3>
+     {{/if}}
+    </form>
+  </div>
+
+<!--Search form design end-->
+
+  {{#if mesg1}}
+    <div class="container">
+       <form action="/updatingstudent"  >
+        <h3>UPDATE STUDENT</h3>
+        
+            <hr>
+            {{#data}}
+
+            <label for="name"><b>Student name</b></label>
+            <input type="text" placeholder="Enter Student Name" name="name" value="{{name}}" id="name" required>
+
+            <label for="id"><b>SID</b></label>
+            <input type="number" placeholder="Enter SID" name="sid" value="{{sid}}" id="sid" required readonly>
+
+            <label for="email"><b>Email</b></label>
+            <input type="email" placeholder="Enter Email ID " name="email" value="{{mail}}" id="mail" required readonly>
+        
+            <button type="submit" class="registerbtn">UPDATE STUDENT</button>
+          {{/data}}
+
+        
+            <p>   <a href="./updatestudent" style="color:black">BACK TO HOME PAGE</a> <br></p> <br>
+     
+</form>
+</div>
+
+   {{/if}} 
+  </html>
+

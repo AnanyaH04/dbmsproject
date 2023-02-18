@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+       <form action="/addingstudent"  >
+   <h3>ADD STUDENT</h3>
+    <hr>
+
+    <label for="name"><b>Student name</b></label>
+    <input type="text" placeholder="Enter Student Name" name="name" id="name" required>
+
+    <label for="phno"><b>Phone Number</b></label>
+    <input type="phone" placeholder="Enter Phone number" name="phno" id="phno" required></br>
+    <p><label for="email"><b>Email</b></label>
+    <input type="email" placeholder="Enter Phone number" name="email" id="mail" required></br></p>
+    
+
+    <label for="sid"><b>Student Id</b></label>
+    <input type="text" placeholder="Enter Student Id" name="sid" id="sid" required>
+
+    <label for="cid"><b>Course Id</b></label>
+    <input type="text" placeholder="Enter Course Choosen" name="cid" id="cid" required>
+
+    <label for="ad"><b>Admission Date</b></label>
+    <input type="date" placeholder="" name="date" id="date" required>
+   
+    <p><button type="submit" class="registerbtn">ADD Student</button></p>
+
+  
+    <p><a href="./index3" style="color:black">BACK TO HOME PAGE</a></p> <br>
+    {{#if mesgt}}
+     <h3>Data has been inserted</h3>
+     {{/if}}
+
+      {{#if checkmesg2}}
+     <h3>Id already present</h3>
+     {{/if}}
+     
+</form>
+</div>
+</body>
+</html>

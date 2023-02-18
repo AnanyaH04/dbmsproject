@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <form action="/addcourse"  >
+        <h3>ADD COURSE</h3>
+        
+            <hr>
+
+            <label for="name"><b>Course name</b></label>
+            <input type="text" placeholder="Enter Course Name" name="name" id="name" required>
+
+            <label for="cid"><b>CID</b></label>
+            <input type="number" placeholder="Enter CID" name="cid" id="cid" required>
+
+            <label for="desc"><b>Description</b></label>
+            <input type="text" placeholder="Enter Course Description" name="desc" id="desc" required>
+        
+        <div class="duration">
+            <strong>Course Duration</strong>
+            <input type="radio" name="duration" id="" value="6months"> 6 months
+            <input type="radio" name="duration" id=""  value="1year">  1 year
+        </div>
+            <button type="submit" class="registerbtn">ADD COURSE</button>
+
+        
+            <p>   <a href="./index" style="color:black">BACK TO HOME PAGE</a> <br></p> <br>
+     {{#if mesg}}
+     <h3>Data has been inserted</h3>
+     {{/if}}
+
+      {{#if checkmesg}}
+     <h3>cid already present</h3>
+     {{/if}}
+</form>
+</div>
+</body>
+</html>

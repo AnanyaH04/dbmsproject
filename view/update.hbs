@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+      <form action="/updatesearch">
+   <h3>SEARCH COURSE TO BE UPDATED</h3>
+   
+    <hr>
+ 
+    <label for="cid"><b>CID</b></label>
+    <input type="number" style="width:200px;" placeholder="type cid to be searched" name="cid" id="cid" required>
+
+    <p><button type="submit" class="registerbtn">SEACRH COURSE</button></p>
+    <p><a href="./index" style="color:black">BACK TO HOME PAGE</a></p>
+
+    <br>
+
+{{#if umesg}}
+     <h3>Data updated!</h3>
+     {{/if}}
+
+
+     
+     {{#if mesg2}}
+     <h3>Data Not Found!</h3>
+     {{/if}}
+    </form>
+  </div>
+
+<!--Search form design end-->
+
+  {{#if mesg1}}
+    <div class="container">
+       <form action="/updatecourse"  >
+        <h3>UPDATE COURSE</h3>
+        
+            <hr>
+            {{#data}}
+
+            <label for="name"><b>Course name</b></label>
+            <input type="text" placeholder="Enter Course Name" name="name" value="{{name}}" id="name" required>
+
+            <label for="cid"><b>CID</b></label>
+            <input type="number" placeholder="Enter CID" name="cid" value="{{cid}}" id="cid" required readonly>
+
+            <label for="desc"><b>Description</b></label>
+            <input type="text" placeholder="Enter Course Description" name="desc" value="{{description}}" id="desc" required readonly>
+        
+        <div class="duration">
+            <strong>Course Duration</strong>
+            <input type="radio" name="duration" id="" value="6months"> 6 months
+            <input type="radio" name="duration" id=""  value="1year">  1 year
+        </div>
+            <button type="submit" class="registerbtn">UPDATE COURSE</button>
+          {{/data}}
+
+        
+            <p>   <a href="./update" style="color:black">BACK TO HOME PAGE</a> <br></p> <br>
+     
+</form>
+</div>
+
+   {{/if}} 
+  </html>
+
